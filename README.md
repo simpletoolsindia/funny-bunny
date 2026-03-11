@@ -2,6 +2,8 @@
 
 ## 🐼 Panda Dev Buddy (VS Code Extension)
 
+![Panda Dev Buddy logo](media/panda-dev-buddy-logo.svg)
+
 Panda Dev Buddy adds playful animated coding buddies in a VS Code webview panel — now with progression, achievements, squad mode, daily challenges, random events, and a 100-action funny engagement engine (50 classic + 50 new pro actions).
 
 ## Characters

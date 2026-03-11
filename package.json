@@ -3,7 +3,7 @@
   "displayName": "Panda Dev Buddy",
   "description": "Funny animated coding buddies for VS Code tasks.",
   "version": "0.0.5",
-  "publisher": "funny-bunny",
+  "publisher": "simpletoolsin",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -122,5 +122,14 @@
     "typescript": "^5.3.3"
   },
   "author": "Sridhar Karuppusamy",
-  "company": "SimpleTools"
+  "company": "SimpleTools.in",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simpletoolsindia/funny-bunny.git"
+  },
+  "homepage": "https://github.com/simpletoolsindia/funny-bunny#readme",
+  "bugs": {
+    "url": "https://github.com/simpletoolsindia/funny-bunny/issues"
+  }
 }

@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8D5BFF"/>
+      <stop offset="1" stop-color="#45D4FF"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="186" y1="360" x2="326" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A7BFF"/>
+      <stop offset="1" stop-color="#00C2FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#bg)"/>
+
+  <circle cx="168" cy="164" r="52" fill="#141414"/>
+  <circle cx="344" cy="164" r="52" fill="#141414"/>
+
+  <circle cx="256" cy="250" r="148" fill="#FDFDFD"/>
+  <circle cx="188" cy="238" r="32" fill="#141414"/>
+  <circle cx="324" cy="238" r="32" fill="#141414"/>
+
+  <ellipse cx="256" cy="296" rx="66" ry="54" fill="#141414"/>
+  <circle cx="236" cy="292" r="10" fill="#FDFDFD"/>
+  <circle cx="276" cy="292" r="10" fill="#FDFDFD"/>
+  <path d="M214 328C228 348 244 358 256 358C268 358 284 348 298 328" stroke="#FDFDFD" stroke-width="11" stroke-linecap="round"/>
+
+  <rect x="186" y="338" width="140" height="52" rx="26" fill="url(#badge)"/>
+  <path d="M224 364H288" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M256 346V382" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+</svg>
