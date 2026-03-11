@@ -1,0 +1,135 @@
+{
+  "name": "panda-dev-buddy",
+  "displayName": "Panda Dev Buddy",
+  "description": "Funny animated coding buddies for VS Code tasks.",
+  "version": "0.0.5",
+  "publisher": "simpletoolsin",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:pandaDevBuddy.start",
+    "onCommand:pandaDevBuddy.run",
+    "onCommand:pandaDevBuddy.success",
+    "onCommand:pandaDevBuddy.error",
+    "onCommand:pandaDevBuddy.sleep",
+    "onCommand:pandaDevBuddy.celebrate",
+    "onCommand:pandaDevBuddy.debug",
+    "onCommand:pandaDevBuddy.characterPanda",
+    "onCommand:pandaDevBuddy.characterBunny",
+    "onCommand:pandaDevBuddy.characterFox",
+    "onCommand:pandaDevBuddy.rewardBamboo",
+    "onCommand:pandaDevBuddy.nextSkin",
+    "onCommand:pandaDevBuddy.toggleDemoMode",
+    "onCommand:pandaDevBuddy.toggleSquadMode",
+    "onCommand:pandaDevBuddy.toggleAmbientFx",
+    "onCommand:pandaDevBuddy.triggerRandomEvent",
+    "onCommand:pandaDevBuddy.showDailyChallenge",
+    "onCommand:pandaDevBuddy.nextFunnyAction",
+    "onCommand:pandaDevBuddy.randomFunnyAction"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pandaDevBuddy.start",
+        "title": "Panda Dev Buddy: Open Buddy"
+      },
+      {
+        "command": "pandaDevBuddy.run",
+        "title": "Panda Dev Buddy: Set Running"
+      },
+      {
+        "command": "pandaDevBuddy.success",
+        "title": "Panda Dev Buddy: Set Success"
+      },
+      {
+        "command": "pandaDevBuddy.error",
+        "title": "Panda Dev Buddy: Set Error"
+      },
+      {
+        "command": "pandaDevBuddy.sleep",
+        "title": "Panda Dev Buddy: Set Sleep"
+      },
+      {
+        "command": "pandaDevBuddy.celebrate",
+        "title": "Panda Dev Buddy: Set Celebrate"
+      },
+      {
+        "command": "pandaDevBuddy.debug",
+        "title": "Panda Dev Buddy: Set Debug"
+      },
+      {
+        "command": "pandaDevBuddy.characterPanda",
+        "title": "Panda Dev Buddy: Character Panda"
+      },
+      {
+        "command": "pandaDevBuddy.characterBunny",
+        "title": "Panda Dev Buddy: Character Bunny"
+      },
+      {
+        "command": "pandaDevBuddy.characterFox",
+        "title": "Panda Dev Buddy: Character Fox"
+      },
+      {
+        "command": "pandaDevBuddy.rewardBamboo",
+        "title": "Panda Dev Buddy: +1 Bamboo Reward"
+      },
+      {
+        "command": "pandaDevBuddy.nextSkin",
+        "title": "Panda Dev Buddy: Next Unlockable Skin"
+      },
+      {
+        "command": "pandaDevBuddy.toggleDemoMode",
+        "title": "Panda Dev Buddy: Toggle Auto Demo Mode"
+      },
+      {
+        "command": "pandaDevBuddy.toggleSquadMode",
+        "title": "Panda Dev Buddy: Toggle Squad Mode"
+      },
+      {
+        "command": "pandaDevBuddy.toggleAmbientFx",
+        "title": "Panda Dev Buddy: Toggle Ambient FX"
+      },
+      {
+        "command": "pandaDevBuddy.triggerRandomEvent",
+        "title": "Panda Dev Buddy: Trigger Random Event"
+      },
+      {
+        "command": "pandaDevBuddy.showDailyChallenge",
+        "title": "Panda Dev Buddy: Show Daily Challenge"
+      },
+      {
+        "command": "pandaDevBuddy.nextFunnyAction",
+        "title": "Panda Dev Buddy: Next Funny Action (1/100)"
+      },
+      {
+        "command": "pandaDevBuddy.randomFunnyAction",
+        "title": "Panda Dev Buddy: Random Funny Action (1/100)"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  },
+  "author": "Sridhar Karuppusamy",
+  "company": "SimpleTools.in",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simpletoolsindia/funny-bunny.git"
+  },
+  "homepage": "https://github.com/simpletoolsindia/funny-bunny#readme",
+  "bugs": {
+    "url": "https://github.com/simpletoolsindia/funny-bunny/issues"
+  }
+}

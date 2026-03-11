@@ -1,0 +1,228 @@
+:root {
+  color-scheme: light dark;
+  --size: 108px;
+  --action-dx: 10px;
+  --action-dy: -6px;
+  --action-rot: 10deg;
+  --action-scale: 1.1;
+  --action-duration: 520ms;
+}
+
+body {
+  margin: 0;
+  font-family: var(--vscode-font-family, system-ui, sans-serif);
+  background: radial-gradient(circle at 50% 5%, color-mix(in srgb, var(--vscode-editor-background) 75%, #88d6ff 25%), var(--vscode-editor-background));
+  color: var(--vscode-editor-foreground);
+}
+
+.buddy-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 16px;
+}
+
+.buddy-wrap.fx-on {
+  background: radial-gradient(circle at 50% 5%, rgb(128 206 255 / 10%), transparent 55%);
+}
+
+.buddy-wrap.fx-off {
+  background: transparent;
+}
+
+.action {
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px dashed rgb(128 206 255 / 45%);
+  background: rgb(128 206 255 / 8%);
+}
+
+.panda-action-flash {
+  animation: actionFlash 0.4s ease;
+}
+
+.panda-action-style {
+  animation: actionStyle var(--action-duration) ease-in-out;
+}
+
+.status-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 12px;
+  border: 1px solid var(--vscode-input-border, #666);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: color-mix(in srgb, var(--vscode-editor-background) 80%, #ffffff 20%);
+}
+
+.squad {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 30px;
+}
+
+.mini {
+  font-size: 11px;
+  border-radius: 12px;
+  padding: 4px 7px;
+  border: 1px solid #555;
+  opacity: 0.75;
+}
+
+.mini.active {
+  opacity: 1;
+  border-color: #66d9ff;
+  box-shadow: 0 0 0 1px #66d9ff;
+}
+
+.panda {
+  width: var(--size);
+  height: var(--size);
+  margin-inline: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 22%);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  position: relative;
+}
+
+.panda::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 18px;
+  border: 2px dashed transparent;
+  pointer-events: none;
+}
+
+.character-panda {
+  background-image: var(--sprite-url), radial-gradient(circle at 35% 30%, #fff 0 24px, #232323 25px 42px, #fff 43px 52px, transparent 53px);
+  background-size: 864px 108px, cover;
+}
+
+.character-bunny {
+  background-image: linear-gradient(180deg, #f5f5f5 0 65%, #d6e0f7 65% 100%), radial-gradient(circle at 30% 30%, #ffffff 0 45%, #b0b9cc 46% 100%);
+  border: 2px solid #eff3ff;
+}
+
+.character-fox {
+  background-image: linear-gradient(165deg, #ffae57 0 45%, #fff2d8 45% 75%, #8f4f1f 75% 100%), radial-gradient(circle at 70% 30%, #fff4e3 0 40%, #ce7b37 41% 100%);
+  border: 2px solid #ffd09a;
+}
+
+.skin-classic { filter: none; }
+.skin-ninja { filter: contrast(1.3) brightness(0.75) saturate(0.8); }
+.skin-cyber { filter: hue-rotate(145deg) saturate(1.4); }
+.skin-galaxy { filter: hue-rotate(250deg) saturate(1.5) brightness(1.1); }
+
+.panda-idle { animation: breathe 2.4s ease-in-out infinite; }
+.panda-run { animation: runFrames 0.8s steps(4) infinite, sprint 0.3s ease-in-out infinite alternate; }
+.panda-success { animation: dance 0.7s ease-in-out infinite; }
+.panda-error { animation: crash 0.7s cubic-bezier(.36,.07,.19,.97) 1, dizzy 0.6s linear 1 0.7s; }
+.panda-sleep { animation: sleep 2.2s ease-in-out infinite; }
+.panda-celebrate { animation: confettiBounce 0.75s ease-in-out infinite; }
+.panda-debug { animation: scan 1.1s ease-in-out infinite; }
+.panda-debug::after { border-color: #66d9ff; animation: ringPulse 1.1s ease-in-out infinite; }
+
+.quote {
+  max-width: 460px;
+  opacity: 0.95;
+  font-size: 13px;
+}
+
+.challenge {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgb(128 206 255 / 10%);
+}
+
+.hint {
+  font-size: 12px;
+  opacity: 0.72;
+  max-width: 520px;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-2px) scale(1.06); }
+}
+
+@keyframes runFrames {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: -432px 0, 0 0; }
+}
+
+@keyframes sprint {
+  from { transform: translateX(-8px); }
+  to { transform: translateX(8px); }
+}
+
+@keyframes dance {
+  0% { transform: rotate(-9deg) scale(1); }
+  33% { transform: rotate(9deg) scale(1.11) translateY(-4px); }
+  66% { transform: rotate(-5deg) scale(1.06) translateY(0); }
+  100% { transform: rotate(9deg) scale(1.1) translateY(-2px); }
+}
+
+@keyframes crash {
+  0% { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(16deg) translateX(10px); }
+  50% { transform: rotate(-14deg) translateX(-8px); }
+  100% { transform: rotate(85deg) translateY(8px); }
+}
+
+@keyframes dizzy {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(120deg); }
+}
+
+@keyframes sleep {
+  0%, 100% { transform: translateY(0); opacity: 0.78; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+@keyframes confettiBounce {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  30% { transform: translateY(-14px) rotate(-9deg) scale(1.06); }
+  60% { transform: translateY(-2px) rotate(11deg) scale(1.15); }
+  100% { transform: translateY(0) rotate(0deg) scale(1.05); }
+}
+
+@keyframes scan {
+  0% { transform: translateX(-8px) scale(1); }
+  50% { transform: translateX(8px) scale(1.06); }
+  100% { transform: translateX(-8px) scale(1); }
+}
+
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes actionFlash {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.12); filter: brightness(1.25); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+@keyframes actionStyle {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  40% { transform: translate(var(--action-dx), var(--action-dy)) rotate(var(--action-rot)) scale(var(--action-scale)); }
+  70% { transform: translate(calc(var(--action-dx) * -0.5), calc(var(--action-dy) * -0.2)) rotate(calc(var(--action-rot) * -0.5)) scale(1.02); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
