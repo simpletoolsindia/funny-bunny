@@ -92,3 +92,9 @@ Then press `F5` in VS Code to launch the Extension Development Host and run budd
 - Expected frame size is **108x108**.
 - Running animation uses the first **4 horizontal frames**.
 - If `media/panda-sprite.png` is missing, built-in CSS character visuals are used.
+
+## Developer
+
+- **Developer:** Sridhar Karuppusamy
+- **Company:** SimpleTools
+
